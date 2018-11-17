@@ -10,6 +10,8 @@ class BirthdayGreeter < Sinatra::Base
   post '/index' do
     $person = Person.new(params[:name], params[:day], params[:month])
     @person = $person
+    @person.birthday_today?
+    @person.message
     erb :greet
   end
 
