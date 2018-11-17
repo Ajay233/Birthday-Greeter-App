@@ -1,4 +1,5 @@
 require 'sinatra/base'
+require './lib/person'
 
 class BirthdayGreeter < Sinatra::Base
 
@@ -7,11 +8,12 @@ class BirthdayGreeter < Sinatra::Base
   end
 
   post '/index' do
-    @name = params[:name]
-    @day = params[:day]
-    @month = params[:month]
+    $person = Person.new(params[:name], params[:day], params[:month])
+    @person = $person
     erb :greet
   end
+
+
 
 !run if app_file == $0
 end

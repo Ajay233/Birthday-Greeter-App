@@ -2,6 +2,10 @@
 <html>
   <head>
     <style media="screen">
+      center {
+        padding-top: 10px
+      }
+
       h1 {
         font-size: 100px;
       }
@@ -10,6 +14,9 @@
       }
       input {
         width: 15%
+      }
+      .button1 {
+        background-color: #99ccff;
       }
       body {
         background-image: url("http://livewallpaperswide.com/wp-content/uploads/2016/11/birthday-balloons-hd-wallpaper.jpg")
@@ -21,31 +28,30 @@
     </style>
   </head>
   <body background = http://livewallpaperswide.com/wp-content/uploads/2016/11/birthday-balloons-hd-wallpaper.jpg>
-    <center> <h1>Hello there!!</h1> </center>
+    <center>
+      <h1>Hello there!!</h1>
     <form action="/index" method="post">
-      <center><h2>What's your name?</h2></center>
-      <center>
-          <input type="text" name="name">
+      <h2>What's your name?</h2>
+        <input type="text" name="name">
+      <h2>When's your birthday?</h2>
+        <input type="number" name="day">
+         <select class="" name="month">
+          <option value="January">January</option>
+          <option value="February">February</option>
+          <option value="March">March</option>
+          <option value="April">April</option>
+          <option value="May">May</option>
+          <option value="June">June</option>
+          <option value="July">July</option>
+          <option value="August">August</option>
+          <option value="September">September</option>
+          <option value="October">October</option>
+          <option value="November">November</option>
+          <option value="December">December</option>
+        </select>
+        <div>
+          <input class="button1" type="submit" value="Submit">
+        </div>
       </center>
-      <center>
-        <h2>When's your birthday?</h2>
-      </center>
-      <center>
-          <input type="number" name="day">
-          <select class="" name="month">
-            <option value="January">January</option>
-            <option value="February">February</option>
-            <option value="March">March</option>
-            <option value="April">April</option>
-            <option value="May">May</option>
-            <option value="June">June</option>
-            <option value="July">July</option>
-            <option value="August">August</option>
-            <option value="September">September</option>
-            <option value="October">October</option>
-            <option value="November">November</option>
-            <option value="December">December</option>
-          </select>
-          <input type="submit" value="Submit">
-      </body>
+    </body>
 </html>
