@@ -20,11 +20,11 @@ class Person
   end
 
   def days_to_birthday
-    if end_of_year < @user_birthday
+    if @user_birthday > Time.now && @user_birthday < end_of_year
+      ((@user_birthday - Time.now) / SECONDS_IN_A_DAY).ceil
+    else
       birthday = Time.mktime(Time.now.year+1, MONTHS[@user_month], @user_day)
       ((birthday - Time.now) / SECONDS_IN_A_DAY).ceil
-    else
-      ((@user_birthday - Time.now) / SECONDS_IN_A_DAY).ceil
     end
   end
 
