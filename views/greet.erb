@@ -39,12 +39,21 @@
       background-size: cover;
 
     }
+
+    .button1 {
+      background-color: #99ccff;
+      border-radius: 5px;
+    }
     </style>
   </head>
   <body background = http://starkovtattoo.spb.ru/images/000/DSC100045124.jpg>
     <center>
       <h1 style ="padding-left: 20%; padding-right: 20%;"><%= @person.message %></h1>
-    </center>
+
     <br>
+    <form class="" action="/" method="get">
+      <input class="button1" type="submit" value="Home">
+    </form>
+    </center>
   </body>
 </html>
